@@ -25,11 +25,11 @@ These instructions are for Fedora, for other Linux flavors modify the httpd part
 
 1. Make sure httpd and mod_wsgi are installed
 
-yum install httpd mod_wsgi
+> yum install httpd mod_wsgi
 
 2. In /etc/httpd/conf/httpd.conf file add
 
-<VirtualHost _default_:80>
+    <VirtualHost _default_:80>
     DocumentRoot /path/to/application
 
     WSGIDaemonProcess sandbox user=<username> group=<groupname> threads=15 maximum-requests=10000 python-path=/path/to/application/path/to/python/site-packages
@@ -45,6 +45,6 @@ yum install httpd mod_wsgi
         Allow from all
     </Directory>
 
-</VirtualHost>
+    </VirtualHost>
 
 3. Make sure you uncomment "NameVirtualHost *:80" in httpd.conf file
