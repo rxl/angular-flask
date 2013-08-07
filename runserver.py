@@ -1,5 +1,5 @@
 import os
-from AngularFlask import app
+from angularflask import app
 
 def runserver():
 	port = int(os.environ.get('PORT', 5000))
