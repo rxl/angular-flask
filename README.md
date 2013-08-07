@@ -18,3 +18,33 @@
 
 6. check out your blog
 > http://localhost:5000/blog
+
+### Running with Apache (and mod_wsgi)
+
+These instructions are for Fedora, for other Linux flavors modify the httpd parts accordingly
+
+1. Make sure httpd and mod_wsgi are installed
+
+yum install httpd mod_wsgi
+
+2. In /etc/httpd/conf/httpd.conf file add
+
+<VirtualHost _default_:80>
+    DocumentRoot /path/to/application
+
+    WSGIDaemonProcess sandbox user=<username> group=<groupname> threads=15 maximum-requests=10000 python-path=/path/to/application/path/to/python/site-packages
+    WSGIScriptAlias / /path/to/application/apache/angularflask.wsgi
+    WSGIProcessGroup <name_of_application>
+
+    CustomLog "|/usr/sbin/rotatelogs /path/to/application/apache/logs/access.log.%Y%m%d-%H%M%S 5M" combined
+    ErrorLog "|/usr/sbin/rotatelogs /path/to/application/apache/logs/error.log.%Y%m%d-%H%M%S 5M"
+    LogLevel warn
+
+    <Directory /path/to/application>
+        Order deny,allow
+        Allow from all
+    </Directory>
+
+</VirtualHost>
+
+3. Make sure you uncomment "NameVirtualHost *:80" in httpd.conf file
