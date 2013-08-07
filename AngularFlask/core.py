@@ -1,4 +1,4 @@
-from AngularFlask import app
+from angularflask import app
 
 # SQLAlchemy
 from flask.ext.sqlalchemy import SQLAlchemy

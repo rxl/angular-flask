@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from AngularFlask.core import db
-from AngularFlask import app
+from angularflask.core import db
+from angularflask import app
 
 class Post(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
