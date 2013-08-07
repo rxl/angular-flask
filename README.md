@@ -27,8 +27,8 @@ These instructions are for Fedora, for other Linux flavors modify the httpd part
 
 > yum install httpd mod_wsgi
 
-2. In /etc/httpd/conf/httpd.conf file add
-
+2. In /etc/httpd/conf/httpd.conf file add:
+```
     <VirtualHost _default_:80>
     DocumentRoot /path/to/application
 
@@ -46,5 +46,5 @@ These instructions are for Fedora, for other Linux flavors modify the httpd part
     </Directory>
 
     </VirtualHost>
-
+```
 3. Make sure you uncomment "NameVirtualHost *:80" in httpd.conf file
