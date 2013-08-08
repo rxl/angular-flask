@@ -21,7 +21,7 @@ session = api_manager.session
 @app.route('/about')
 @app.route('/blog')
 def basic_pages(**kwargs):
-	return make_response(open('angular_flask/templates/index.html').read())
+	return make_response(open(os.path.join(app.root_path, 'templates')+'/index.html').read())
 
 # routing for CRUD-style endpoints
 # passes routing onto the angular frontend if the requested resource exists
@@ -36,8 +36,7 @@ def rest_pages(model_name, item_id=None):
 		model_class = crud_url_models[model_name]
 		if item_id is None or session.query(exists().where(
 			model_class.id == item_id)).scalar():
-			return make_response(open(
-				'angular_flask/templates/index.html').read())
+			return make_response(open(os.path.join(app.root_path, 'templates')+'/index.html').read())
 	abort(404)
 
 # special file handlers and error handlers
