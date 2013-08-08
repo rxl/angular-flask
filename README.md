@@ -47,4 +47,10 @@ These instructions are for Fedora, for other Linux flavors modify the httpd part
 
     </VirtualHost>
 ```
-3. Make sure you uncomment "NameVirtualHost *:80" in httpd.conf file
+3. Uncomment "NameVirtualHost *:80" in httpd.conf file
+
+4. Make sure you create the /path/to/application/apache/logs folder
+
+5. Make sure that in WSGIDaemonProcess, the python-path=/path/to/application/path/to/python/site-packages points to the virtualenv that you created with "pip install -r requirements.txt"
+
+
