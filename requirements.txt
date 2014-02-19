@@ -1,5 +1,5 @@
 Flask==0.10.1
--e git+https://github.com/goodscloud/flask-restless@6eabe067e938e59c297df10766403a6b905e302a#egg=Flask_Restless-dev
+Flask-Restless==0.12.1
 Flask-SQLAlchemy==0.16
 Jinja2==2.7
 MarkupSafe==0.18
