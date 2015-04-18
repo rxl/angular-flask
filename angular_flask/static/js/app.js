@@ -6,24 +6,24 @@ angular.module('AngularFlask', ['angularFlaskServices'])
 		$routeProvider
 		.when('/', {
 			templateUrl: 'static/partials/landing.html',
-			controller: IndexController
+			controller: 'IndexController'
 		})
 		.when('/about', {
 			templateUrl: 'static/partials/about.html',
-			controller: AboutController
+			controller: 'AboutController'
 		})
 		.when('/post', {
 			templateUrl: 'static/partials/post-list.html',
-			controller: PostListController
+			controller: 'PostListController'
 		})
 		.when('/post/:postId', {
 			templateUrl: '/static/partials/post-detail.html',
-			controller: PostDetailController
+			controller: 'PostDetailController'
 		})
 		/* Create a "/blog" route that takes the user to the same place as "/post" */
 		.when('/blog', {
 			templateUrl: 'static/partials/post-list.html',
-			controller: PostListController
+			controller: 'PostListController'
 		})
 		.otherwise({
 			redirectTo: '/'
