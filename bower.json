@@ -1,0 +1,23 @@
+{
+  "name": "angular-flask",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jstacoder/angular-flask",
+  "authors": [
+    "kyle roux <kyle@level2designs.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "angular_flask/static/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-resource": "~1.4.0",
+    "bootstrap": "~3.3.4"
+  }
+}
