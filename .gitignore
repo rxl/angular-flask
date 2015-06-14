@@ -3,3 +3,8 @@ venv
 *~
 .DS_Store
 ignore
+*.map
+*.min.js
+*i18n
+*/docs/
+angular_flask/static/lib/*
