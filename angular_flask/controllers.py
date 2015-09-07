@@ -1,8 +1,7 @@
 import os
 
-from flask import Flask, request, Response
-from flask import render_template, url_for, redirect, send_from_directory
-from flask import send_file, make_response, abort
+from flask import render_template, send_from_directory
+from flask import make_response, abort
 
 from angular_flask import app
 
@@ -38,7 +37,7 @@ def rest_pages(model_name, item_id=None):
     if model_name in crud_url_models:
         model_class = crud_url_models[model_name]
         if item_id is None or session.query(exists().where(
-                model_class.id == item_id)).scalar():
+                        model_class.id == item_id)).scalar():
             return make_response(open(
                 'angular_flask/templates/index.html').read())
     abort(404)

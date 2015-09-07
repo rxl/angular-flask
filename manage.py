@@ -1,10 +1,8 @@
-import os
 import json
 import argparse
 import requests
 
 from angular_flask.core import db
-from angular_flask.models import Post
 
 
 def create_sample_db_entry(api_endpoint, payload):
@@ -54,6 +52,7 @@ def main():
         print "\nSample data added to database!"
     else:
         raise Exception('Invalid command')
+
 
 if __name__ == '__main__':
     main()
