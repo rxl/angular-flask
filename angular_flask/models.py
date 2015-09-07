@@ -20,6 +20,7 @@ class Post(db.Model):
     def __repr__(self):
         return '<Post %r>' % self.title
 
+
 # models for which we want to create API endpoints
 app.config['API_MODELS'] = {'post': Post}
 
