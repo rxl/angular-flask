@@ -7,8 +7,10 @@ A template for building apps with an Angular frontend and a Flask / python backe
 1. clone this repo
 
 2. install all the necessary packages (best done inside of a virtual environment)
-> sudo apt install python3-pip
-> pip3 install -r requirements.txt
+
+  > sudo apt install python3-pip
+
+  > pip3 install -r requirements.txt
 
 3. run the app
 > python3 runserver.py
